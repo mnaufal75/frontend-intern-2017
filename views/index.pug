@@ -1,5 +1,28 @@
 extends layout
 
 block content
-  h1= Login
-  p Ini buat Login
+  img.logo(src="images/logo.png")
+
+  div(style="center")
+    form(method="POST" action="https://dev.prelo.id/api/auth/login")
+      div.a
+        input.form-group(type="text", placeholder="Email atau Username")
+        br
+        input.form-group(type="password", placeholder="Password")
+        br
+        button.form-submit(type='submit') Log In
+        br
+        a(href='').lupa Lupa password?
+
+      div.b
+        button.facebook(type='submit') Log In dengan Facebook
+        br
+        button.twitter(type='submit') Log In dengan Twitter
+
+      div.c
+        span Prelo tidak akan post apapun tanpa persetujuan kamu
+        hr
+
+      div.d
+        span Belum Punya ID Prelo? 
+        a(href='').daftar Daftar sekarang
