@@ -1,5 +1,97 @@
 extends layout
 
+block additionalCSS
+  link(rel='stylesheet', href='/stylesheets/lovelist.css')
+
 block content
-  h1= Lovelist
-  p Ini buat #{title}
+  div
+    div.header
+      div.left
+        i(class='fa fa-reorder fa-2x')
+      div.mid
+        img.logos(src="images/logo.png")
+      div.right
+        i(class='fa fa-search fa-2x')
+        i(class='fa fa-shopping-cart fa-2x')
+
+    div.bheader
+      span.username LOVELIST
+      hr.garis
+
+    div.list-item
+      div.item
+        div.kiri
+          img(src="")
+        div.kanan
+          span.nama-barang Vans Disney
+          span.harga-barang Rp 720.000
+          div.asd
+            div.comment
+              i(class='fa fa-comment-o')
+              span.total-comment 2
+            div.love
+              i(class='fa fa-heart-o')
+              span.total-love 7
+        hr.garis
+
+      div.item
+        div.kiri
+          img(src="")
+        div.kanan
+          span.nama-barang Poster Kayu Tema Vespa
+          span.harga-barang Rp 175.000
+          div.asd
+            div.comment
+              i(class='fa fa-comment-o')
+              span.total-comment 0
+            div.love
+              i(class='fa fa-heart-o')
+              span.total-love 4
+        hr.garis
+
+      div.item
+        div.kiri
+          img(src="")
+        div.kanan
+          span.nama-barang Preloved TOPSHOP
+          span.harga-barang Rp 650.000
+          div.asd
+            div.comment
+              i(class='fa fa-comment-o')
+              span.total-comment 0
+            div.love
+              i(class='fa fa-heart-o')
+              span.total-love 7
+        hr.garis
+
+      div.item
+        div.kiri
+          img(src="")
+        div.kanan
+          span.nama-barang DK084
+          span.harga-barang Rp 160.000
+          div.asd
+            div.comment
+              i(class='fa fa-comment-o')
+              span.total-comment 0
+            div.love
+              i(class='fa fa-heart-o')
+              span.total-love 4
+        hr.garis
+
+      div.item
+        div.kiri
+          img(src="")
+        div.kanan
+          span.nama-barang Jaket Jeans
+          span.harga-barang Rp 110.000
+          div.asd
+            div.comment
+              i(class='fa fa-comment-o')
+              span.total-comment 0
+            div.love
+              i(class='fa fa-heart-o')
+              span.total-love 4
+
+        div.load-more
+          button.load(type='submit') Load More

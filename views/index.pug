@@ -1,14 +1,17 @@
 extends layout
 
+block additionalCSS
+  link(rel='stylesheet', href='/stylesheets/style.css')
+
 block content
   img.logo(src="images/logo.png")
 
-  div(style="center")
+  div
     form(method="POST" action="https://dev.prelo.id/api/auth/login")
       div.a
-        input.form-group(type="text", placeholder="Email atau Username")
+        input.form-group(type="text", placeholder="Email atau Username", name="username_or_email")
         br
-        input.form-group(type="password", placeholder="Password")
+        input.form-group(type="password", placeholder="Password", name="password")
         br
         button.form-submit(type='submit') Log In
         br
