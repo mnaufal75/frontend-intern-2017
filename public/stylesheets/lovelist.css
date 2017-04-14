@@ -113,23 +113,22 @@ body {
   margin-bottom: 10px;
   padding: 10px;
 }
-.load-more {
+.load {
   text-align: center;
   background-color: #f0f0f0;
   padding: 20px;
   margin: auto;
+  width: 400px;
 }
-.load {
+.load-more {
   width: 100px;
   height: 30px;
   background-color: #fff;
   border-style: solid;
-  border-top: 10px;
-  color: #46ccc4;
   border-radius: 15px;
-  float: center;
+  border: 1px;
   font-size: 12px;
+  font-weight: bold;
   margin-top: 10px;
-  font-style: bold;
-  color: #000;
+  color: #46ccc4;
 }

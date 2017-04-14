@@ -19,22 +19,23 @@ block content
       hr.garis
 
     div.list-item
-      each val in data
-        div.item
-          div.kiri
-            img.gambar-barang(src= val["display_picts"][0])
-          div.kanan
-            span.nama-barang= val["name"]
-            span.harga-barang= val["price"]
-            div.asd
-              div.comment
-                i(class='fa fa-comment-o')
-                span.total-comment= val["num_comment"]
-              div.love
-                i(class='fa fa-heart-o')
-                span.total-love= val["num_lovelist"]
-          div.bawah
-            hr.garis
+      each val, index in data
+        if index < 5
+          div.item
+            div.kiri
+              img.gambar-barang(src= val["display_picts"][0])
+            div.kanan
+              span.nama-barang= val["name"]
+              span.harga-barang= val["price"]
+              div.asd
+                div.comment
+                  i(class='fa fa-comment-o')
+                  span.total-comment= val["num_comment"]
+                div.love
+                  i(class='fa fa-heart-o')
+                  span.total-love= val["num_lovelist"]
+            div.bawah
+              hr.garis
 
-    div.load-more
-      button.load(type='submit') Load More
+    div.load
+      button.load-more(type='submit') Load More
