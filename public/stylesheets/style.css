@@ -64,6 +64,10 @@ button {
   border: none;
   background-color: #10a49b;
 }
+.fa-facebook,
+.fa-twitter {
+  margin-right: 10px;
+}
 .c {
   margin-bottom: 30px;
   font-size: 12px;

@@ -22,14 +22,9 @@ router.post('/', function(req, res, next) {
     body: bodies,
     json: true
   }, function (error, response, body) {
-    if (bodies.username_or_email.length < 4 || bodies.password.length < 6) {
-    	res.send("username kurang dari 4 karakter atau password kurang dari 6 karakter");
-    } else if (!error && response.statusCode === 200) {
-    	//app.locals.username = 'asdasd';
-    	app.locals.token = body._data.token;
-    	token = body._data.token;
-    	console.log(token);
-      res.redirect('/users');
+    if (!error && response.statusCode === 200) {
+    	var token = body._data.token;
+      res.redirect('/users/?token=' + token);
     } else {
       next(error);
     }

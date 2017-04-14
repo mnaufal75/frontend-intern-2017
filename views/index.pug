@@ -7,23 +7,23 @@ block content
   img.logo(src="images/logo.png")
 
   div
-    form(method="POST" action="/")
+    form(method="POST" action="/" name='login')
       div.a
         input.form-group(type="text", placeholder="Email atau Username", name="username_or_email")
         br
         input.form-group(type="password", placeholder="Password", name="password")
         br
-        button.form-submit(type='submit') Log In
+        button.form-submit(type='button' onclick="checkLogin()") Log In
         br
-        a(href='').lupa Lupa password?
+        a(href='' onclick="stillDeveloped()").lupa Lupa password?
 
       div.b
-        button.facebook(type='submit')
+        button.facebook(type='button' onclick="stillDeveloped()")
           i(class='fa fa-facebook')
           span Log In dengan Facebook
         br
         
-        button.twitter(type='submit')
+        button.twitter(type='button' onclick="stillDeveloped()")
           i(class='fa fa-twitter')
           span Log In dengan Twitter
 
@@ -33,4 +33,7 @@ block content
 
       div.d
         span Belum Punya ID Prelo? 
-        a(href='').daftar Daftar sekarang
+        a(href='' onclick="stillDeveloped()").daftar Daftar sekarang
+
+  script(src='https://code.jquery.com/jquery-3.2.1.min.js')
+  script(src='/script/index.js')

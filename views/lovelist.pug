@@ -9,18 +9,18 @@ block content
       div.left
         i(class='fa fa-reorder fa-2x')
       div.mid
-        img.logos(src="images/logo.png")
+        img.logos(src="../images/logo.png")
       div.right
         i(class='fa fa-search fa-2x')
         i(class='fa fa-shopping-cart fa-2x')
 
     div.bheader
-      span.username LOVELIST
+      span.lovelist LOVELIST
       hr.garis
 
     div.list-item
       each val, index in data
-        if index < 5
+        if index < 4
           div.item
             div.kiri
               img.gambar-barang(src= val["display_picts"][0])
@@ -35,7 +35,24 @@ block content
                   i(class='fa fa-heart-o')
                   span.total-love= val["num_lovelist"]
             div.bawah
-              hr.garis
+              //hr.garis
+        else if index == 5
+          div.item
+            div.kiri
+              img.gambar-barang(src= val["display_picts"][0])
+            div.kanan
+              span.nama-barang= val["name"]
+              span.harga-barang= val["price"]
+              div.asd
+                div.comment
+                  i(class='fa fa-comment-o')
+                  span.total-comment= val["num_comment"]
+                div.love
+                  i(class='fa fa-heart-o')
+                  span.total-love= val["num_lovelist"]
 
     div.load
       button.load-more(type='submit') Load More
+
+  script(src='https://code.jquery.com/jquery-3.2.1.min.js')
+  script(src='/script/lovelist.js')

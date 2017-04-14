@@ -8,10 +8,8 @@ router.get('/', function(req, res, next) {
   var url = "https://dev.prelo.id/api/me/lovelist"
   
   var header = {
-    Authorization: "Token " + "63ed74bddec13ea0ac1a72d5f676208450604c9d"
+    Authorization: "Token " + req.query.token
   }
-
-  console.log(header.Authorization);
 
   request({
     method: 'get',
