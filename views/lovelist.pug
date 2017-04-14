@@ -19,79 +19,22 @@ block content
       hr.garis
 
     div.list-item
-      div.item
-        div.kiri
-          img(src="")
-        div.kanan
-          span.nama-barang Vans Disney
-          span.harga-barang Rp 720.000
-          div.asd
-            div.comment
-              i(class='fa fa-comment-o')
-              span.total-comment 2
-            div.love
-              i(class='fa fa-heart-o')
-              span.total-love 7
-        hr.garis
+      each val in data
+        div.item
+          div.kiri
+            img.gambar-barang(src= val["display_picts"][0])
+          div.kanan
+            span.nama-barang= val["name"]
+            span.harga-barang= val["price"]
+            div.asd
+              div.comment
+                i(class='fa fa-comment-o')
+                span.total-comment= val["num_comment"]
+              div.love
+                i(class='fa fa-heart-o')
+                span.total-love= val["num_lovelist"]
+          div.bawah
+            hr.garis
 
-      div.item
-        div.kiri
-          img(src="")
-        div.kanan
-          span.nama-barang Poster Kayu Tema Vespa
-          span.harga-barang Rp 175.000
-          div.asd
-            div.comment
-              i(class='fa fa-comment-o')
-              span.total-comment 0
-            div.love
-              i(class='fa fa-heart-o')
-              span.total-love 4
-        hr.garis
-
-      div.item
-        div.kiri
-          img(src="")
-        div.kanan
-          span.nama-barang Preloved TOPSHOP
-          span.harga-barang Rp 650.000
-          div.asd
-            div.comment
-              i(class='fa fa-comment-o')
-              span.total-comment 0
-            div.love
-              i(class='fa fa-heart-o')
-              span.total-love 7
-        hr.garis
-
-      div.item
-        div.kiri
-          img(src="")
-        div.kanan
-          span.nama-barang DK084
-          span.harga-barang Rp 160.000
-          div.asd
-            div.comment
-              i(class='fa fa-comment-o')
-              span.total-comment 0
-            div.love
-              i(class='fa fa-heart-o')
-              span.total-love 4
-        hr.garis
-
-      div.item
-        div.kiri
-          img(src="")
-        div.kanan
-          span.nama-barang Jaket Jeans
-          span.harga-barang Rp 110.000
-          div.asd
-            div.comment
-              i(class='fa fa-comment-o')
-              span.total-comment 0
-            div.love
-              i(class='fa fa-heart-o')
-              span.total-love 4
-
-        div.load-more
-          button.load(type='submit') Load More
+    div.load-more
+      button.load(type='submit') Load More
